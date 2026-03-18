@@ -1,4 +1,7 @@
 export default {
+  outputFileTracingIncludes: {
+    "/**": ["./data/**"],
+  },
   experimental: {
     ppr: true,
     inlineCss: true,
