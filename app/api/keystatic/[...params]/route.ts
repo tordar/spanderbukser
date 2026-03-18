@@ -3,7 +3,7 @@ import config from '../../../../keystatic.config'
 
 const handler = makeRouteHandler({ config })
 
-export async function GET(request: Request, context: unknown) {
+export async function GET(request: Request) {
   console.log('[keystatic] GET', request.url)
   console.log('[keystatic] env check', {
     nodeEnv: process.env.NODE_ENV,
@@ -14,14 +14,14 @@ export async function GET(request: Request, context: unknown) {
     hasSecret: !!process.env.KEYSTATIC_SECRET,
     secretPrefix: process.env.KEYSTATIC_SECRET?.slice(0, 4),
   })
-  const res = await handler.GET(request, context as never)
+  const res = await handler.GET(request)
   console.log('[keystatic] GET response status', res.status)
   return res
 }
 
-export async function POST(request: Request, context: unknown) {
+export async function POST(request: Request) {
   console.log('[keystatic] POST', request.url)
-  const res = await handler.POST(request, context as never)
+  const res = await handler.POST(request)
   console.log('[keystatic] POST response status', res.status)
   return res
 }
