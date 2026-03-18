@@ -18,6 +18,7 @@ export async function GET(request: Request) {
   const res = await handler.GET(request)
   const body = await res.clone().text()
   console.log('[keystatic] GET response status', res.status, 'body:', body)
+  console.log('[keystatic] GET set-cookie:', res.headers.get('set-cookie'))
   return res
 }
 
