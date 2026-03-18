@@ -15,7 +15,8 @@ export async function GET(request: Request) {
     secretPrefix: process.env.KEYSTATIC_SECRET?.slice(0, 4),
   })
   const res = await handler.GET(request)
-  console.log('[keystatic] GET response status', res.status)
+  const body = await res.clone().text()
+  console.log('[keystatic] GET response status', res.status, 'body:', body)
   return res
 }
 
