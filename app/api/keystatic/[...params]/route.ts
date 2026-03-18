@@ -5,6 +5,7 @@ const handler = makeRouteHandler({ config })
 
 export async function GET(request: Request) {
   console.log('[keystatic] GET', request.url)
+  console.log('[keystatic] cookies:', request.headers.get('cookie'))
   console.log('[keystatic] env check', {
     nodeEnv: process.env.NODE_ENV,
     hasClientId: !!process.env.KEYSTATIC_GITHUB_CLIENT_ID,
