@@ -1,7 +1,12 @@
 import { config, collection, fields } from '@keystatic/core'
 
 export default config({
-  storage: { kind: 'local' },
+  storage: process.env.NODE_ENV === 'production'
+    ? {
+        kind: 'github',
+        repo: 'tordar/spanderbukser',
+      }
+    : { kind: 'local' },
   collections: {
     products: collection({
       label: 'Products',
