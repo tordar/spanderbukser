@@ -7,7 +7,8 @@ import {
   getCart,
   removeFromCart,
   updateCart,
-} from "lib/shopify";
+} from "lib/store";
+import Stripe from "stripe";
 import { updateTag } from "next/cache";
 import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
@@ -84,7 +85,6 @@ export async function updateItemQuantity(
         ]);
       }
     } else if (quantity > 0) {
-      // If the item doesn't exist in the cart and quantity > 0, add it
       await addToCart([{ merchandiseId, quantity }]);
     }
 
@@ -96,11 +96,44 @@ export async function updateItemQuantity(
 }
 
 export async function redirectToCheckout() {
-  let cart = await getCart();
-  redirect(cart!.checkoutUrl);
+  const cart = await getCart();
+
+  if (!cart || cart.lines.length === 0) {
+    return;
+  }
+
+  const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!);
+  const siteUrl =
+    process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
+
+  const session = await stripe.checkout.sessions.create({
+    mode: "payment",
+    line_items: cart.lines.map((line) => {
+      const unitAmount = Math.round(
+        (Number(line.cost.totalAmount.amount) / line.quantity) * 100
+      );
+      const variantLabel =
+        line.merchandise.title !== "Default Title"
+          ? ` – ${line.merchandise.title}`
+          : "";
+      return {
+        quantity: line.quantity,
+        price_data: {
+          currency: line.cost.totalAmount.currencyCode.toLowerCase(),
+          unit_amount: unitAmount,
+          product_data: {
+            name: `${line.merchandise.product.title}${variantLabel}`,
+          },
+        },
+      };
+    }),
+    success_url: `${siteUrl}/order/success?session_id={CHECKOUT_SESSION_ID}`,
+    cancel_url: siteUrl,
+  });
+
+  redirect(session.url!);
 }
 
 export async function createCartAndSetCookie() {
-  let cart = await createCart();
-  (await cookies()).set("cartId", cart.id!);
+  await createCart();
 }

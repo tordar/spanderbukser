@@ -1,0 +1,69 @@
+{
+  "handle": "classic-denim-overalls",
+  "id": "prod_001",
+  "title": "Classic Denim Overalls",
+  "description": "Sturdy denim overalls with adjustable straps and multiple pockets. A timeless workwear staple.",
+  "descriptionHtml": "<p>Sturdy denim overalls with adjustable straps and multiple pockets. A timeless workwear staple.</p>",
+  "availableForSale": true,
+  "tags": ["clothing", "overalls", "denim"],
+  "options": [
+    {
+      "id": "opt_001_size",
+      "name": "Size",
+      "values": ["S", "M", "L", "XL"]
+    }
+  ],
+  "variants": [
+    {
+      "id": "var_001_s",
+      "title": "S",
+      "availableForSale": true,
+      "selectedOptions": [{ "name": "Size", "value": "S" }],
+      "price": { "amount": "899.00", "currencyCode": "NOK" }
+    },
+    {
+      "id": "var_001_m",
+      "title": "M",
+      "availableForSale": true,
+      "selectedOptions": [{ "name": "Size", "value": "M" }],
+      "price": { "amount": "899.00", "currencyCode": "NOK" }
+    },
+    {
+      "id": "var_001_l",
+      "title": "L",
+      "availableForSale": true,
+      "selectedOptions": [{ "name": "Size", "value": "L" }],
+      "price": { "amount": "899.00", "currencyCode": "NOK" }
+    },
+    {
+      "id": "var_001_xl",
+      "title": "XL",
+      "availableForSale": true,
+      "selectedOptions": [{ "name": "Size", "value": "XL" }],
+      "price": { "amount": "899.00", "currencyCode": "NOK" }
+    }
+  ],
+  "priceRange": {
+    "minVariantPrice": { "amount": "899.00", "currencyCode": "NOK" },
+    "maxVariantPrice": { "amount": "899.00", "currencyCode": "NOK" }
+  },
+  "featuredImage": {
+    "url": "https://images.unsplash.com/photo-1594938298603-c8148c4b984e?w=800",
+    "altText": "Classic Denim Overalls",
+    "width": 800,
+    "height": 1000
+  },
+  "images": [
+    {
+      "url": "https://images.unsplash.com/photo-1594938298603-c8148c4b984e?w=800",
+      "altText": "Classic Denim Overalls front",
+      "width": 800,
+      "height": 1000
+    }
+  ],
+  "seo": {
+    "title": "Classic Denim Overalls",
+    "description": "Sturdy denim overalls with adjustable straps and multiple pockets."
+  },
+  "updatedAt": "2026-01-01T00:00:00Z"
+}

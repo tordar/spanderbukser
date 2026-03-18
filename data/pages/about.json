@@ -1,0 +1,13 @@
+{
+  "handle": "about",
+  "id": "page_001",
+  "title": "About",
+  "body": "<p>Spanderbukser is a small Norwegian shop specializing in quality overalls and dungarees. We believe in durable, functional clothing that lasts.</p>",
+  "bodySummary": "A small Norwegian shop specializing in quality overalls.",
+  "seo": {
+    "title": "About Spanderbukser",
+    "description": "Learn about our small Norwegian overalls shop."
+  },
+  "createdAt": "2026-01-01T00:00:00Z",
+  "updatedAt": "2026-01-01T00:00:00Z"
+}

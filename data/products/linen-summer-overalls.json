@@ -1,0 +1,69 @@
+{
+  "handle": "linen-summer-overalls",
+  "id": "prod_003",
+  "title": "Linen Summer Overalls",
+  "description": "Lightweight linen overalls perfect for warm days. Relaxed fit with side pockets.",
+  "descriptionHtml": "<p>Lightweight linen overalls perfect for warm days. Relaxed fit with side pockets.</p>",
+  "availableForSale": true,
+  "tags": ["clothing", "overalls", "summer"],
+  "options": [
+    {
+      "id": "opt_003_size",
+      "name": "Size",
+      "values": ["XS", "S", "M", "L"]
+    }
+  ],
+  "variants": [
+    {
+      "id": "var_003_xs",
+      "title": "XS",
+      "availableForSale": true,
+      "selectedOptions": [{ "name": "Size", "value": "XS" }],
+      "price": { "amount": "749.00", "currencyCode": "NOK" }
+    },
+    {
+      "id": "var_003_s",
+      "title": "S",
+      "availableForSale": true,
+      "selectedOptions": [{ "name": "Size", "value": "S" }],
+      "price": { "amount": "749.00", "currencyCode": "NOK" }
+    },
+    {
+      "id": "var_003_m",
+      "title": "M",
+      "availableForSale": true,
+      "selectedOptions": [{ "name": "Size", "value": "M" }],
+      "price": { "amount": "749.00", "currencyCode": "NOK" }
+    },
+    {
+      "id": "var_003_l",
+      "title": "L",
+      "availableForSale": false,
+      "selectedOptions": [{ "name": "Size", "value": "L" }],
+      "price": { "amount": "749.00", "currencyCode": "NOK" }
+    }
+  ],
+  "priceRange": {
+    "minVariantPrice": { "amount": "749.00", "currencyCode": "NOK" },
+    "maxVariantPrice": { "amount": "749.00", "currencyCode": "NOK" }
+  },
+  "featuredImage": {
+    "url": "https://images.unsplash.com/photo-1509631179647-0177331693ae?w=800",
+    "altText": "Linen Summer Overalls",
+    "width": 800,
+    "height": 1000
+  },
+  "images": [
+    {
+      "url": "https://images.unsplash.com/photo-1509631179647-0177331693ae?w=800",
+      "altText": "Linen Summer Overalls",
+      "width": 800,
+      "height": 1000
+    }
+  ],
+  "seo": {
+    "title": "Linen Summer Overalls",
+    "description": "Lightweight linen overalls perfect for warm days."
+  },
+  "updatedAt": "2026-02-01T00:00:00Z"
+}

@@ -1,0 +1,86 @@
+{
+  "handle": "canvas-work-overalls",
+  "id": "prod_002",
+  "title": "Canvas Work Overalls",
+  "description": "Heavy-duty canvas overalls built for tough conditions. Reinforced knees and tool pockets.",
+  "descriptionHtml": "<p>Heavy-duty canvas overalls built for tough conditions. Reinforced knees and tool pockets.</p>",
+  "availableForSale": true,
+  "tags": ["clothing", "overalls", "workwear"],
+  "options": [
+    {
+      "id": "opt_002_size",
+      "name": "Size",
+      "values": ["S", "M", "L", "XL", "XXL"]
+    },
+    {
+      "id": "opt_002_color",
+      "name": "Color",
+      "values": ["Khaki", "Black"]
+    }
+  ],
+  "variants": [
+    {
+      "id": "var_002_m_khaki",
+      "title": "M / Khaki",
+      "availableForSale": true,
+      "selectedOptions": [
+        { "name": "Size", "value": "M" },
+        { "name": "Color", "value": "Khaki" }
+      ],
+      "price": { "amount": "1199.00", "currencyCode": "NOK" }
+    },
+    {
+      "id": "var_002_m_black",
+      "title": "M / Black",
+      "availableForSale": true,
+      "selectedOptions": [
+        { "name": "Size", "value": "M" },
+        { "name": "Color", "value": "Black" }
+      ],
+      "price": { "amount": "1199.00", "currencyCode": "NOK" }
+    },
+    {
+      "id": "var_002_l_khaki",
+      "title": "L / Khaki",
+      "availableForSale": true,
+      "selectedOptions": [
+        { "name": "Size", "value": "L" },
+        { "name": "Color", "value": "Khaki" }
+      ],
+      "price": { "amount": "1199.00", "currencyCode": "NOK" }
+    },
+    {
+      "id": "var_002_l_black",
+      "title": "L / Black",
+      "availableForSale": true,
+      "selectedOptions": [
+        { "name": "Size", "value": "L" },
+        { "name": "Color", "value": "Black" }
+      ],
+      "price": { "amount": "1199.00", "currencyCode": "NOK" }
+    }
+  ],
+  "priceRange": {
+    "minVariantPrice": { "amount": "1199.00", "currencyCode": "NOK" },
+    "maxVariantPrice": { "amount": "1199.00", "currencyCode": "NOK" }
+  },
+  "featuredImage": {
+    "url": "https://images.unsplash.com/photo-1620012253295-c15cc3e65df4?w=800",
+    "altText": "Canvas Work Overalls",
+    "width": 800,
+    "height": 1000
+  },
+  "images": [
+    {
+      "url": "https://images.unsplash.com/photo-1620012253295-c15cc3e65df4?w=800",
+      "altText": "Canvas Work Overalls",
+      "width": 800,
+      "height": 1000
+    }
+  ],
+  "seo": {
+    "title": "Canvas Work Overalls",
+    "description": "Heavy-duty canvas overalls built for tough conditions."
+  },
+  "updatedAt": "2026-01-15T00:00:00Z"
+}
